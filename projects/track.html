@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <style>
+        * {
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+        }
+
+        body {
+            padding-top: 2rem;
+        }
+
+        .circuit-container {
+            width: 981px;
+            position: relative;
+            margin: 0 auto;
+        }
+
+        .car {
+            width: 30px;
+            height: 30px;
+            position: absolute;
+            font-size: 75%;
+            font-weight: bold;
+            text-align: center;
+            line-height: 30px;
+            color: white;
+            border-radius: 5px;
+            top: -15px;
+            left: -15px;
+        }
+
+        #car-1,
+        #car-1-stat .thumb {
+            background-color: #455b70;
+        }
+
+        #car-2,
+        #car-2-stat .thumb {
+            background-color: #da4132;
+        }
+
+        #car-3,
+        #car-3-stat .thumb {
+            background-color: #17a05d;
+        }
+
+        .stats {
+            border-top: 1px solid #ccc;
+            border-bottom: 1px solid #ccc;
+            margin: 3rem 0;
+            padding: 3rem 0;
+            overflow: hidden;
+        }
+
+        .stat {
+            width: 30%;
+            float: left;
+            margin: 0 1.5%;
+            position: relative;
+            padding: 2rem 1rem;
+        }
+
+        .stat p:last-child {
+            margin-bottom: 0;
+        }
+
+        .thumb {
+            margin: 0 auto;
+            width: 3rem;
+            height: 3rem;
+            line-height: 3rem;
+            color: white;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+
+<body>
+<h1>Formula 1 Grand Prix Du Canada 2017</h1>
+<h3>Circuit Gilles-Villeneuve, Montreal</h3>
+
+<div class="stats">
+    <div class="stat" id="car-1-stat">
+        <div class="thumb">LH</div>
+        <h3>Lewis Hamilton</h3>
+        <p>Team: Mercedes</p>
+    </div> <!-- end .stat -->
+
+    <div class="stats">
+        <div class="stat" id="car-2-stat">
+            <div class="thumb">VB</div>
+            <h3>Valtteri Bottas</h3>
+            <p>Team: Mercedes</p>
+        </div> <!-- end .stat -->
+
+        <div class="stats">
+            <div class="stat" id="car-3-stat">
+                <div class="thumb">DR</div>
+                <h3>Daniel Ricciardo</h3>
+                <p>Team: Red Bull Racing Tag Heuer</p>
+            </div> <!-- end .stat -->
+        </div> <!-- end .stats -->
+
+        <div class="circuit-container">
+            <div class="cars">
+                <div class="car" id="car-1">LH</div>
+                <div class="car" id="car-2">VB</div>
+                <div class="car" id="car-3">DR</div>
+            </div> <!-- end .cars -->
+
+            <!-- SVG FILE HERE -->
+
+
+        </div>
+
+
+        <script src="../lib/anime.js"></script>
+        <script>
+            const path = anime.path('#circuit path'),
+                results = ['10000', '12000', '15000'];
+
+            anime({
+                targets: '.car',
+                translateX: path('x'),
+                translateY: path('y'),
+                rotate: path('angle'),
+                duration: function(el, i) {
+                    return results[i];
+                },
+                easing: 'linear',
+            });
+        </script>
+</body>
+</html>
