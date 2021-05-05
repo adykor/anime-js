@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <style>
+        input {
+            display: inline-block;
+            border: none;
+        }
+
+        p {
+            display: inline-block;
+        }
+    </style>
+</head>
+
+
+<body>
+<svg xmlns="http://www.w3.org/2000/svg" width="500" height="500" viewBox="0 0 500 500">
+    <defs>
+        <style>
+            .cls-1 {
+                fill-rule: evenodd;
+            }
+        </style>
+    </defs>
+    <path id="Polygon_1" data-name="Polygon 1" class="cls-1" d="M250,98l133,96.637L332.2,351H167.8L117,194.637Z"/>
+</svg>
+
+
+
+
+
+
+<script src="../lib/anime.js"></script>
+<script>
+    anime({
+        targets: '#Polygon_1',
+        points: 'M250 194.637Z 98l133 351H167.8L117 98l133',
+        delay: 1000
+    });
+
+
+</script>
+</body>
+</html>
