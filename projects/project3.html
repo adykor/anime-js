@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <style>
+        input {
+            display: inline-block;
+            border: none;
+        }
+
+        p {
+            display: inline-block;
+        }
+    </style>
+</head>
+
+
+<body>
+<h2>Visitors</h2>
+
+<p><strong>This week:</strong></p>
+<input type="text" value="0" id="weekly-count">
+
+<p><strong>This month:</strong></p>
+<input type="text" value="0" id="monthly-count">
+
+<p><strong>This year:</strong></p>
+<input type="text" value="0" id="yearly-count">
+
+
+<script src="../lib/anime.js"></script>
+<script>
+    anime({
+        targets: "#weekly-count",
+        value: 774,
+        round: 1
+    });
+
+    anime({
+        targets: "#monthly-count",
+        value: 774*4,
+        round: 1
+    });
+
+    anime({
+        targets: "#yearly-count",
+        value: 774*4*12,
+        round: 1
+    });
+</script>
+</body>
+</html>
