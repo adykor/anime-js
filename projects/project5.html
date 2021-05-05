@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <style>
+        .container {
+            width: 50%;
+            margin: 0 auto;
+        }
+
+        .circle {
+            width: 5rem;
+            height: 5rem;
+            background-color: #059de1;
+            border-radius: 50%;
+            margin: 1rem;
+            display: inline-block;
+        }
+    </style>
+</head>
+
+
+<body>
+<div class="container">
+    <div class="circle" id="first"></div>
+    <div class="circle" id="second"></div>
+    <div class="circle" id="third"></div>
+</div>
+
+
+<script src="../lib/anime.js"></script>
+<script>
+    anime({
+        targets: 'circle',
+        // CSS Properties
+        backgroundColor: '#333',
+        // Transforms
+        translateX: '+=100',
+        translateY: function(el, i, l) {
+            return i * 100;
+        },
+        delay: function() {
+            return anime.random(0, 2000)
+        }
+    });
+</script>
+</body>
+</html>
