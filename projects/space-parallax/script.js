@@ -13,7 +13,7 @@ let keys = [
     "Jupiter",
     "Saturn",
     "Uranus",
-    "Neptune",
+    "Neptune"
 ];
 
 let slider = new Swiper(".swiper-container", {
@@ -25,7 +25,7 @@ let slider = new Swiper(".swiper-container", {
         el: ".planet-links",
         clickable: true,
         renderBullet: function(index, className) {
-            return '<div class"' + className + '">' + keys[index] + "</div";
+            return '<div class="' + className + '">' + keys[index] + "</div>";
         }
     }
 });
