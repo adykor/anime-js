@@ -5,7 +5,7 @@ const shadow = document.querySelector(".shadow");
 const content = document.querySelector(".content");
 const section = document.querySelector("section");
 const image_container = document.querySelector(".imgContainer");
-const opacity = document.querySelector(".opacity");
+const opacity = document.querySelectorAll(".opacity");
 const border = document.querySelector(".border");
 
 let header_height = header.offsetHeight;
@@ -17,7 +17,6 @@ window.addEventListener('scroll', () => {
 
     translate.forEach(element => {
         let speed = element.dataset.speed;
-        console.log("speed");
         element.style.transform = `translateY(${scroll * speed}px)`;
     });
 

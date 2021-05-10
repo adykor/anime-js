@@ -37,16 +37,16 @@ header:after {
 .mountain1 {
     position: absolute;
     bottom: -100px;
-    width: 1500px;
+    width: 3500px;
     right: 0;
     z-index: 19;
 }
 
 .person {
     position: absolute;
-    width: 650px;
-    bottom: -100px;
-    left: -70px;
+    width: 150px;
+    bottom: 100px;
+    left: 670px;
     z-index: 20;
 }
 
@@ -105,7 +105,6 @@ nav .container {
     width: 1.55rem;
     height: 1.5rem;
     cursor: pointer;
-    background-color: black;
     display: flex;
     align-items: center;
     justify-content: flex-end;
@@ -151,7 +150,7 @@ nav .container {
 
 section {
     width: 100%;
-    bakcground-color: #151515;
+    background-color: #151515;
     position: relative;
 }
 
@@ -205,20 +204,20 @@ section .container > * {
     width: 100%;
     left: 0;
     z-index: 20;
-    bakcground: linear-gradient(to top, #151515, transparent);
+    background: linear-gradient(to top, #151515, transparent);
 }
 
 .opacity {
     opacity: 0;
 }
 
-@media (max-width: 850px) {
+@media (max-width: 850px){
     section .container{
         grid-template-columns: 1fr;
     }
 }
 
-@media(max-width: 600px) {
+@media (max-width: 600px){
     .big-title{
         font-size: 3rem
     }
