@@ -52,9 +52,10 @@ header:after {
 
 .mountain2 {
     position: absolute;
-    width: 1950px;
-    bottom: -100px;
-    left: 0;
+    width: 1350px;
+    height: 800px;
+    bottom: -50px;
+    left: 690px;
     z-index: 18;
 }
 
@@ -68,8 +69,8 @@ header:after {
 
 .sky {
     position: absolute;
-    width: 2100px;
-    bottom: 250px;
+    width: 1950px;
+    bottom: -50px;
     right: 0;
 }
 
