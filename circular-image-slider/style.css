@@ -1,0 +1,111 @@
+
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+body {
+    font-family: Tahoma;
+    background: #8e9eab;
+    background: linear-gradient(to right, #dde3e7, #8e9eab);
+    position: relative;
+    display: block;
+    width: 100%;
+    height: auto;
+    min-height: 100%;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+.slider {
+    position: relative;
+    display: block;
+    width: 100%;
+    width: 100vw;
+    height: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.sidebar-nav-bar {
+    position: absolute;
+    width: 180px;
+    height: 180px;
+    bottom: -90px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 90px;
+    text-align: center;
+    background: #dde3e6;
+    z-index: 100;
+}
+
+.slider-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 64px;
+    height: 64px;
+    transition: 0.2s;
+    cursor: pointer;
+    z-index: 100;
+    opacity: 0.8;
+}
+
+.slider-arrow:hover {
+    opacity: 1;
+}
+
+.slider-arrow-prev {
+    left: 16px;
+    width: 64px;
+    height: 64px;
+    background-image: url(https://www.iconsdb.com/icons/preview/white/arrow-88-xxl.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: auto 64px;
+}
+
+.slider-arrow-next {
+    right: 16px;
+    width: 64px;
+    height: 64px;
+    background-image: url(https://www.iconsdb.com/icons/preview/white/arrow-24-xxl.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: auto 64px;
+}
+
+.nav-control {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    opacity: 0.5;
+    width: 32px;
+    height: 32px;
+    transition: 0.2s;
+    cursor: pointer;
+    background-image: url(https://image.flaticon.com/icons/png/128/0/14.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 26px 26px;
+    margin-top: 32px;
+    z-index: 3;
+}
+
+
+.nav-control:hover {
+    opacity: 0.8;
+}
+
+.slider-list {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
