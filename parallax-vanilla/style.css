@@ -90,6 +90,20 @@ nav .container {
     align-items: center;
 }
 
+nav .nav-links ul {
+    display: flex;
+    flex-direction: row;
+}
+
+nav nav-links ul li{
+    padding: 0 4px;
+    list-style: none;
+}
+
+nav .nav-links ul li img {
+    transform: scale(0.45);
+}
+
 .logo {
     color: #fff;
     font-size: 1.1rem;
