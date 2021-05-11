@@ -72,7 +72,7 @@ button:focus {
     transform: translate(-50%, -50%) translateX(var(--image-translate-offset, 0));
     width: 180%;
     height: 180%;
-    transition: transform: 1000ms ease, opacity 1000ms ease;
+    transition: transform 1000ms ease, opacity 1000ms ease;
     overflow: hidden;
 }
 
@@ -137,7 +137,7 @@ button:focus {
     position: relative;
     width: 100%;
     height: 100%;
-    perspective: 100px;
+    perspective: 1000px;
 }
 
 .card {
