@@ -1,6 +1,51 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
 
 
+
+/* DRAG & DROP */
+* {
+    margin: 20px;
+}
+
+
+.drop-zone {
+    width: 100px;
+    height: 100px;
+    float: left;
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 8px dashed black;
+}
+
+.drop-zone--over {
+    opacity: 0.5;
+}
+#myDraggableElement {
+    width: 50px;
+    height: 50px;
+    background: yellowgreen;
+}
+
+#left {
+    border-color: deeppink;
+}
+
+#right {
+    border-color: aqua;
+}
+
+#myFileInput {
+    padding: 80px 40px;
+}
+
+/* END DRAG & DROP */
+
+
+
+
+
 body {
     font-family: 'Poppins', sans-serif;
 }
@@ -37,29 +82,30 @@ header:after {
     z-index: 19;
 }
 
-.person /* drag & drop */ {
+.person {
     position: absolute;
     width: 150px;
-    bottom: 100px;
-    left: 680px;
+    bottom: 200px;
+    left: 240px;
     z-index: 20;
 }
 
-.mountain2 {
+.mountain2 /* shelves */ {
     position: absolute;
-    width: 1950px;
+    width: 1350px;
     height: 800px;
-    bottom: -50px;
-    left: 690px;
+    bottom: 150px;
+    left: 90px;
     z-index: 18;
 }
 
-.mountain3 /* shelves */ {
+.mountain3 {
     position: absolute;
-    width: 1250px;
+    width: 1950px;
     bottom: -150px;
     right: 0;
     z-index: 17;
+
 }
 
 .sky /* drag & drop 2 */ {
@@ -79,45 +125,7 @@ nav {
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0.05), transparent);
 }
 
-/* DRAG & DROP */
-* {
-    color: darkviolet;
-    margin: 20px;
-}
 
-.drop-zone {
-    width: 100px;
-    height: 100px;
-    float: left;
-    margin-right: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: 8px dashed black;
-}
-
-.drop-zone--over {
-    opacity: 0.5;
-}
-#myDraggableElement {
-    width: 50px;
-    height: 50px;
-    background: yellowgreen;
-}
-
-#left {
-    border-color: deeppink;
-}
-
-#right {
-    border-color: aqua;
-}
-
-#myFileInput {
-    padding: 80px 40px;
-}
-
-/* END DRAG & DROP */
 
 
 
@@ -191,6 +199,11 @@ nav .nav-links ul li img {
     color: #fff;
 }
 
+
+
+
+
+
 section {
     width: 100%;
     background-color: #151515;
@@ -199,11 +212,11 @@ section {
 
 section .container {
     padding: 3rem;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    /*display: grid;*/
+    /*grid-template-columns: repeat(2, 1fr);*/
     align-items: center;
     justify-content: center;
-    min-height: 100vh;
+    /*min-height: 100vh;*/
 }
 
 section img {
@@ -272,4 +285,79 @@ section .container > * {
     .title{
         font-size: 1.2rem;
     }
+}
+
+
+
+
+
+
+/* DRAG & DROP */
+* {
+    margin: 20px;
+}
+
+/*.person {*/
+/*    position: absolute;*/
+/*    width: 150px;*/
+/*    bottom: 200px;*/
+/*    left: 240px;*/
+/*    z-index: 20;*/
+/*}*/
+
+.drop-zone {
+    width: 150px;
+    height: 150px;
+    float: left;
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 8px dashed black;
+    /*z-index: 20;*/
+}
+
+.drop-zone--over {
+    opacity: 0.5;
+    /*z-index: 20;*/
+}
+#myDraggableElement {
+    width: 100px;
+    height: 100px;
+    /*background-image: ;*/
+    background: yellowgreen;
+    /*z-index: 20;*/
+}
+
+#A, #B, #C, #D, #E, #F, #G, #H, #I {
+    border-color: deeppink;
+}
+
+/*#right {*/
+/*    border-color: aqua;*/
+/*}*/
+
+#myFileInput {
+    padding: 80px 40px;
+}
+
+/* END DRAG & DROP */
+
+
+
+
+
+/* buttons */
+#addNewPlant, #compostPlant {
+    padding: 10px;
+}
+
+#greenhouseContainer {
+    padding: 20px;
+    margin: 20px;
+}
+
+#plantsMovable {
+    padding: 20px;
+    margin: 20px;
 }

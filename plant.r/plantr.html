@@ -13,36 +13,92 @@
 
 <header>
 
-    <h1 class="big-title translate" data-speed="0.1">Greenhouse</h1>
-
-    <div class="person translate" data-speed="-0.25" alt="">
-        <div class="drop-zone" id="left">
-            <div id="myDraggableElement" draggable="true"></div>
-        </div>
-        <div class="drop-zone" id="right"></div>
-    </div>
+    <h1 class="big-title translate" data-speed="0.1">GREENHOUSE</h1>
 
 
+<!--    DROP ZONE 1-->
+<!--    <div class="person translate" data-speed="-0.25" alt="">-->
+<!--        <div class="drop-zone" id="left">-->
+<!--            <div id="myDraggableElement" draggable="true"></div>-->
+<!--        </div>-->
+<!--        <div class="drop-zone" id="right"></div>-->
+<!--    </div>-->
+
+    <!--   END DROP ZONE 1-->
+
+<!--    <div class="drop-zone" id="left">-->
+<!--        <div id="myDraggableElement" draggable="true"></div>-->
+<!--    </div>-->
+<!--    <div class="drop-zone" id="right"></div>-->
+
+
+    <!--    <img src="person.png" class="person translate" data-speed="-0.25" alt="">-->
     <img src="standingPlant.png" class="mountain1 translate" data-speed="-0.2" alt="">
-    <img src="mountain2.png" class="mountain2 translate" data-speed="0.4" alt="">
-    <img src="shelves.png" class="mountain3 translate" data-speed="0.3" alt="">
+    <img src="shelves.png" class="mountain2 translate" data-speed="0.4" alt="">
+    <img src="mountain3.png" class="mountain3 translate" data-speed="0.3" alt="">
     <img src="sky.png" class="sky translate" data-speed="0.5" alt="">
+
+
 </header>
+
+
+
 
 <section>
     <div class="shadow"></div>
 
     <div class="container">
         <div class="content opacity">
-            <h3 class="title">
+
+
+<div id="greenhouse">
+            <h2 class="title">
+                Greenhouse
+                <div class="border"></div>
+            </h2>
+
+
+<div class="container" id="plantsMovable">
+    <div class="drop-zone" id="A">
+        <div id="myDraggableElement" draggable="true"><img src="../space-parallax/earth1.png" height="100" width="100"></div>
+    </div>
+    <div class="drop-zone" id="B"></div>
+    <div class="drop-zone" id="C"></div>
+    <div class="drop-zone" id="D"></div>
+    <div class="drop-zone" id="E"></div>
+    <div class="drop-zone" id="F"></div>
+    <div class="drop-zone" id="G"></div>
+    <div class="drop-zone" id="H"></div>
+    <div class="drop-zone" id="I"></div>
+</div>
+
+
+
+    <div class="container" id="greenhouseContainer">
+<!--            <p class="text">I'm baby mixtape letterpress raw denim you probably haven't heard of them twee sustainable vexillologist brooklyn blog shaman 90's adaptogen kinfolk vinyl. La croix palo santo lomo bespoke kinfolk 90's photo booth cardigan literally marfa mlkshk selfies street art direct trade fanny pack.</p>-->
+            <button type="button" id="addNewPlant" class="btn btn-light"><strong>Add New Plant</strong></button>
+            <button type="button" id="compostPlant" class="btn btn-light"><strong>Compost Plant X_X</strong></button>
+</div>
+</div>
+
+
+
+ <div class="container" id="reminders">
+            <h2 class="title">
                 Reminders
                 <div class="border"></div>
-            </h3>
-            <p class="text">I'm baby mixtape letterpress raw denim you probably haven't heard of them twee sustainable vexillologist brooklyn blog shaman 90's adaptogen kinfolk vinyl. La croix palo santo lomo bespoke kinfolk 90's photo booth cardigan literally marfa mlkshk selfies street art direct trade fanny pack.</p>
-        </div>
+            </h2>
+            <p>
+                <ul>
+                    <li>Name of plant</li>
+                    <li>Frequency</li>
+        </ul>
+            </p>
+            <button type="button" id="editReminders" class="btn btn-light"><strong>Edit Reminders</strong></button>
+</div>
 
-        <div class="imgContainer opacity">
-            <img src="rocks.jpg" alt="">
+
+
         </div>
     </div>
 </section>
