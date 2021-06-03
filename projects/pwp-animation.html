@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+<style>
+    .container {
+        width: 25%;
+        margin: 0 auto;
+    }
+
+    .circle {
+    width: 15px;
+    height: 15px;
+    background-color: aqua;
+        /*circle shape*/
+    border-radius: 50%;
+    margin: 1rem;
+    display: flex;
+    }
+
+    </style>
+
+</head>
+
+<body>
+<div class="container">
+    <div class="circle" id="first"></div>
+    <div class="circle" id="second"></div>
+    <div class="circle" id="third"></div>
+</div>
+
+
+<script src="../anime.min.js"></script>
+
+
+<script>
+    var relativeEl = document.querySelector('.circle');
+    relativeEl.style.transform = 'translateX(100px)';
+
+    anime({
+        targets: '.circle',
+        translateX: {
+            value: '*=2.5', // 100px * 2.5 = '250px'
+            duration: 1000
+        },
+        width: {
+            value: '-=20px', // 28 - 20 = '8px'
+            duration: 1800,
+            easing: 'easeInOutSine'
+        },
+        rotate: {
+            value: '+=2turn', // 0 + 2 = '2turn'
+            duration: 1800,
+            easing: 'easeInOutSine'
+        },
+        direction: 'alternate'
+    });
+</script>
+
+<!--ELASTIC EFFECT; MAKES BOX-->
+<!--<script>-->
+<!--    anime({-->
+<!--        targets: '.circle',-->
+<!--        translateX: [-->
+<!--            { value: 250, duration: 1000, delay: 500 },-->
+<!--            { value: 0, duration: 1000, delay: 500 }-->
+<!--        ],-->
+<!--        translateY: [-->
+<!--            { value: -40, duration: 500 },-->
+<!--            { value: 40, duration: 500, delay: 1000 },-->
+<!--            { value: 0, duration: 500, delay: 1000 }-->
+<!--        ],-->
+<!--        scaleX: [-->
+<!--            { value: 4, duration: 100, delay: 500, easing: 'easeOutExpo' },-->
+<!--            { value: 1, duration: 900 },-->
+<!--            { value: 4, duration: 100, delay: 500, easing: 'easeOutExpo' },-->
+<!--            { value: 1, duration: 900 }-->
+<!--        ],-->
+<!--        scaleY: [-->
+<!--            { value: [1.75, 1], duration: 500 },-->
+<!--            { value: 2, duration: 50, delay: 1000, easing: 'easeOutExpo' },-->
+<!--            { value: 1, duration: 450 },-->
+<!--            { value: 1.75, duration: 50, delay: 1000, easing: 'easeOutExpo' },-->
+<!--            { value: 1, duration: 450 }-->
+<!--        ],-->
+<!--        easing: 'easeOutElastic(1, .8)',-->
+<!--        loop: true-->
+<!--    });-->
+<!--</script>-->
+
+
+
+<!--DRAWS A BOX-->
+<!--<script>-->
+<!--    anime({-->
+<!--        targets: '.circle',-->
+<!--        keyframes: [-->
+<!--            {translateY: -40},-->
+<!--            {translateX: 250},-->
+<!--            {translateY: 40},-->
+<!--            {translateX: 0},-->
+<!--            {translateY: 0}-->
+<!--        ],-->
+<!--        duration: 4000,-->
+<!--        easing: 'easeOutElastic(1, .8)',-->
+<!--        loop: true-->
+<!--    });-->
+<!--</script>-->
+
+
+<!--TRANSFORMS TO VARIOUS ROUNDED SQUARES-->
+<!--<script>-->
+<!--    anime({-->
+<!--        targets: '.circle',-->
+<!--        translateX: function(el) {-->
+<!--            return el.getAttribute('data-x');-->
+<!--        },-->
+<!--        translateY: function(el, i) {-->
+<!--            return 50 + (-50 * i);-->
+<!--        },-->
+<!--        scale: function(el, i, l) {-->
+<!--            return (l - i) + .25;-->
+<!--        },-->
+<!--        rotate: function() { return anime.random(-360, 360); },-->
+<!--        borderRadius: function() { return ['50%', anime.random(10, 35) + '%']; },-->
+<!--        duration: function() { return anime.random(1200, 1800); },-->
+<!--        delay: function() { return anime.random(0, 400); },-->
+<!--        direction: 'alternate',-->
+<!--        loop: true-->
+<!--    });-->
+</script>
+</body>
+</html>
